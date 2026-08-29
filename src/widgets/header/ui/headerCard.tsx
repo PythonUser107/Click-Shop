@@ -5,15 +5,7 @@ function HeaderCard() {
   return (
     <header className="flex items-center justify-between px-8 py-4 border-b">
       <div className="flex items-center gap-2">
-        <ShoppingBag className="text-violet-600" size={28} />
-        <div>
-          <p className="font-bold leading-none">
-            click<span className="text-violet-600">SHOP</span>
-          </p>
-          <p className="text-[10px] text-muted-foreground tracking-widest">
-            ONLINE STORES
-          </p>
-        </div>
+        <img src="/logo.jpg" alt="Logo" className="h-9 w-auto object-contain" />
       </div>
 
       <div className="flex items-center gap-2 border rounded-full px-4 py-2 w-72">
@@ -29,7 +21,7 @@ function HeaderCard() {
         <div className="relative">
           <Heart size={22} />
           <span className="absolute -top-2 -right-2 bg-violet-600 text-white text-[10px] rounded-full px-1.5">
-            2
+            0
           </span>
         </div>
         <div className="relative flex items-center gap-2">
