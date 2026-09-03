@@ -3,7 +3,7 @@ import { Main } from "../widgets/main"
 
 const App = () => {
   return (
-    <div>
+    <div className="p-[5px] font-mont bg-gray-100">
       <HeaderCard/>
       <Main />      
     </div>

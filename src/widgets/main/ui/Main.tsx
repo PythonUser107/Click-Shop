@@ -3,19 +3,24 @@ import { Button } from "@/shared/ui/button"
 
 export const Main = () =>  {
   return (
-    <section className="text-center py-32 px-4 bg-gradient-to-b from-violet-50 to-white">
-      <h1 className="text-4xl md:text-5xl font-extrabold text-violet-700 max-w-3xl mx-auto mb-6">
-        Find life-easing technologies only at Click Shop!
-      </h1>
-      <p className="max-w-xl mx-auto text-muted-foreground mb-8">
-        We have the latest smartphones, modern laptops, computers, and various
-        accessories. Only with us you can buy quality technology at affordable
-        prices!
-      </p>
-      <Button className="bg-violet-600 hover:bg-violet-700 rounded-full px-6 py-6 text-base">
-        Get started <ArrowRight size={18} className="ml-1" />
-      </Button>
-    </section>
+    <div className="flex gap-[5px] relative">
+      <div className="border-[1px] bg-white flex-1 rounded-md relative min-h-[calc(100vh-77px)] max-h-[calc(100vh-77px)] shadow-sm overflow-y-auto overflow-x-hidden mt-[5px]">
+        <div className="p-[7px] relative min-h-[calc(100vh-79px)] overflow-hidden max-w-[2000px] mx-auto flex justify-center items-center flex-col gap-3">
+          <div className="flex relative z-[1] flex-col justify-center items-center gap-3">
+            <h2 className="text-[30px] md:text-[40px] lg:text-[45px] font-bold leading-[36px] md:leading-[50px] lg:leading-[55px] text-center mx-[5%] text-indigo-700 drop-shadow-md max-w-[1000px]">
+              Find life-easing technologies only at Click Shop!
+            </h2>
+            <p className="text-gray-600 font-medium text-center max-w-[700px] mx-[5%] text-[12px] md:text-[14px]">
+              We have the latest smartphones, modern laptops, computers, and various accessories. Only with us you can buy quality technology at affordable prices!
+            </p>
+            <button className="pl-[20px] pr-[15px] text-[16px] py-[7px] flex justify-center items-center gap-1 hover:shadow-lg rounded-full duration-100 bg-gradient-to-r from-violet-600 to-indigo-600 hover:bg-indigo-600 active:scale-95 text-white font-medium">
+              <span>Get started</span>
+              <span className="text-[20px] flex justify-center items-center" ></span>
+            </button>
+          </div>  
+        </div>  
+      </div>
+    </div>
   )
 }
 
