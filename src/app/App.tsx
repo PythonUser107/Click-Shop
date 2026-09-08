@@ -1,10 +1,10 @@
-import HeaderCard from "@/widgets/header/ui/headerCard"
-import { Main } from "../widgets/main"
+import Header from "@/widgets/header/Header"
+import Main from "@/widgets/main/Main"
 
 const App = () => {
   return (
     <div className="p-[5px] font-mont bg-gray-100">
-      <HeaderCard/>
+      <Header/>
       <Main />      
     </div>
   )
