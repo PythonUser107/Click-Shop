@@ -1,13 +1,11 @@
-import Header from "@/widgets/header/Header"
-import Main from "@/widgets/main/Main"
+import { MainProvider } from "./Providers/MainProvider"
 
-const App = () => {
-  return (
-    <div className="p-[5px] font-mont bg-gray-100">
-      <Header/>
-      <Main />      
-    </div>
-  )
+function App() {
+    return (
+       <div>
+        <MainProvider/>
+       </div>
+    )
 }
 
 export default App
