@@ -1,8 +1,8 @@
-import { useNavigate } from "react-router"
-import { motion } from "framer-motion"
-import { useEffect, useState } from "react"
 import { AnimatedArrow } from "@/shared/animations/AnimatedArrow"
 import Loader from "@/shared/animations/Loader"
+import { useNavigate } from "react-router"
+import { useEffect, useState } from "react"
+import { motion } from "framer-motion"
 
 function Home() {
   const [isLoading, setIsLoading] = useState(true)
