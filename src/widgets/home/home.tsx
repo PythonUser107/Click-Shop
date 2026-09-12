@@ -1,4 +1,3 @@
-import { ArrowRight } from "lucide-react"
 import { useNavigate } from "react-router"
 import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
@@ -46,13 +45,17 @@ function Home() {
             >
               We have the latest smartphones, modern laptops, computers, and various accessories. Only with us you can buy quality technology at affordable prices!
             </motion.p>
-            <button
+            <motion.button
+              initial={{ opacity: 0, y: 25 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, type: "spring", stiffness: 90, damping: 10 }}
+              whileTap={{ scale: 0.95 }}
               onClick={handleClick}
-              className="pl-[20px] pr-[16px] text-[16px] py-[7px] flex justify-center items-center gap-2 hover:shadow-lg rounded-full duration-100 bg-gradient-to-r from-violet-600 to-indigo-600 hover:bg-indigo-600 active:scale-95 text-white font-medium cursor-pointer group"
+              className="pl-[20px] pr-[16px] text-[16px] py-[7px] flex justify-center items-center gap-2 hover:shadow-lg rounded-full duration-100 bg-gradient-to-r from-violet-600 to-indigo-600 hover:bg-indigo-600 text-white font-medium cursor-pointer group"
             >
               <span>Get started</span>
               <AnimatedArrow />
-            </button>
+            </motion.button>
           </div>
           <div className="w-[250px] h-[250px] left-[10%] top-[20%] bg-purple-500 bg-opacity-30 rounded-full blur-[200px] absolute"></div>
           <div className="w-[300px] h-[300px] top-[50%] right-[10%] bg-indigo-500 bg-opacity-30 rounded-full blur-[200px] absolute"></div>

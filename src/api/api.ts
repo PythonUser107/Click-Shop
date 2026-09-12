@@ -1,17 +1,23 @@
-import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react"
-import type { CategoryType, ProductsType } from "./type"
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
+import type { CategoryType } from "./type"
+import type { Product } from "@/entities/product/model/types"
 
-export const getApi = createApi({
-    reducerPath : "api",
-    baseQuery : fetchBaseQuery({baseUrl : "https://yayraserver-production.up.railway.app/api"}),
-    endpoints : (build) => ({
-        getProductApiByName : build.query<ProductsType[], void>({
-            query : () => "/products/get"
+export const baseApi = createApi({
+    reducerPath: "api",
+    baseQuery: fetchBaseQuery({
+        baseUrl: "https://yayraserver-production.up.railway.app/api"
+    }),
+    tagTypes: ["Products", "Categories"],
+    endpoints: (builder) => ({
+        getProducts: builder.query<Product[], void>({
+            query: () => "/products/get",
+            providesTags: ["Products"],
         }),
-        getCategoryApiByName : build.query<CategoryType[], void>({
-            query : () => "/categories/get"
-        })
-    })
+        getCategories: builder.query<CategoryType[], void>({
+            query: () => "/categories/get",
+            providesTags: ["Categories"],
+        }),
+    }),
 })
 
-export const {useGetProductApiByNameQuery, useGetCategoryApiByNameQuery} = getApi
+export const {useGetProductsQuery,useGetCategoriesQuery} = baseApi
