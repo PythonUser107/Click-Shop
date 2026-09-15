@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
-import type { CategoryType } from "./type"
+import type { Category } from "@/entities/category/model/CategoryType"
 import type { Product } from "@/entities/product/model/ProductType"
 
 export const baseApi = createApi({
@@ -13,7 +13,7 @@ export const baseApi = createApi({
             query: () => "/products/get",
             providesTags: ["Products"],
         }),
-        getCategories: builder.query<CategoryType[], void>({
+        getCategories: builder.query<Category[], void>({
             query: () => "/categories/get",
             providesTags: ["Categories"],
         }),
